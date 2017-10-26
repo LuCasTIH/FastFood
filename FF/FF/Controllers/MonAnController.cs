@@ -33,8 +33,8 @@ namespace FF.Controllers
             {
                 Id = _dbContext.MonAns.ToList().Count + 1,
                 TenMon = viewModel.TenMon,
-                DonGia = viewModel.DonGia
-            
+                DonGia = viewModel.DonGia,
+                HinhAnh = viewModel.HinhAnh
                 
             };
             _dbContext.MonAns.Add(monan);

@@ -1,0 +1,29 @@
+﻿@model FF.ViewModel.MonAnViewModel
+@{
+    ViewBag.Title = "ThemMon";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Thêm Món</h2>
+
+@using (Html.BeginForm("ThemMon", "MonAn"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.TenMon)
+        @Html.TextBoxFor(m => m.TenMon, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.DonGia)
+        @Html.TextBoxFor(m => m.DonGia, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.HinhAnh)
+        @Html.TextBoxFor(m => m.HinhAnh, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" value="Save" class="btn btn-primary">Thêm</button>
+
+}
+    
